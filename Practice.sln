@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{742A066C-194E-4A7C-85DE-842315BE18FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeUnitTest", "PracticeUnitTest\PracticeUnitTest.csproj", "{021B23F8-2589-4B97-BE72-7E3C145B7B5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CFFB8809-9136-4079-B092-7CA73159F060}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F18E0AB2-4F2D-4813-AFF5-497684D3F0BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{2F144C65-374C-4CFB-9D61-A7108B8E19D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.Core", "Practice.Core\Practice.Core.csproj", "{E9A14419-763A-45D8-9EA5-6ABF07EB856F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.Infrastructure", "Practice.Infrastructure\Practice.Infrastructure.csproj", "{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice.MVC5", "Practice.MVC5\Practice.MVC5.csproj", "{725B7423-6AE7-423A-99B0-E6C427EF05F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8C6C1FBF-2AA6-4B1A-9664-170DAC64FA21}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://win-9rjggdprki1:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSharp\\CSharp.csproj
+		SccProjectName1 = CSharp
+		SccLocalPath1 = CSharp
+		SccProjectUniqueName2 = PracticeUnitTest\\PracticeUnitTest.csproj
+		SccProjectName2 = PracticeUnitTest
+		SccLocalPath2 = PracticeUnitTest
+		SccProjectUniqueName3 = Practice.Core\\Practice.Core.csproj
+		SccProjectTopLevelParentUniqueName3 = Practice.sln
+		SccProjectName3 = Practice.Core
+		SccLocalPath3 = Practice.Core
+		SccProjectUniqueName4 = Practice.Infrastructure\\Practice.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName4 = Practice.sln
+		SccProjectName4 = Practice.Infrastructure
+		SccLocalPath4 = Practice.Infrastructure
+		SccProjectUniqueName5 = Practice.MVC5\\Practice.MVC5.csproj
+		SccProjectTopLevelParentUniqueName5 = Practice.sln
+		SccProjectName5 = Practice.MVC5
+		SccLocalPath5 = Practice.MVC5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{742A066C-194E-4A7C-85DE-842315BE18FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742A066C-194E-4A7C-85DE-842315BE18FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742A066C-194E-4A7C-85DE-842315BE18FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742A066C-194E-4A7C-85DE-842315BE18FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021B23F8-2589-4B97-BE72-7E3C145B7B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021B23F8-2589-4B97-BE72-7E3C145B7B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021B23F8-2589-4B97-BE72-7E3C145B7B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021B23F8-2589-4B97-BE72-7E3C145B7B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A14419-763A-45D8-9EA5-6ABF07EB856F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A14419-763A-45D8-9EA5-6ABF07EB856F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A14419-763A-45D8-9EA5-6ABF07EB856F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A14419-763A-45D8-9EA5-6ABF07EB856F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725B7423-6AE7-423A-99B0-E6C427EF05F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725B7423-6AE7-423A-99B0-E6C427EF05F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725B7423-6AE7-423A-99B0-E6C427EF05F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725B7423-6AE7-423A-99B0-E6C427EF05F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9A14419-763A-45D8-9EA5-6ABF07EB856F} = {CFFB8809-9136-4079-B092-7CA73159F060}
+		{D8E3534F-5D9D-4E04-AFBD-407F7B39D4F0} = {F18E0AB2-4F2D-4813-AFF5-497684D3F0BC}
+		{725B7423-6AE7-423A-99B0-E6C427EF05F9} = {2F144C65-374C-4CFB-9D61-A7108B8E19D7}
+	EndGlobalSection
+EndGlobal
