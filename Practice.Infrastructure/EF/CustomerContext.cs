@@ -24,7 +24,27 @@ namespace Practice.Infrastructure.EF
 
         protected override DbEntityValidationResult ValidateEntity(DbEntityEntry entityEntry, IDictionary<object, object> items)
         {
+            var result = new DbEntityValidationResult(entityEntry, new List<DbValidationError>());
+
+            ValidateCustomer(result);
+
+            if (!result.IsValid)
+            {
+                return result;
+            }
             return base.ValidateEntity(entityEntry, items);
+        }
+
+        private static void ValidateCustomer( DbEntityValidationResult result)
+        {
+            var customer = result.Entry.Entity as Customer;
+            if (customer != null)
+            {
+                if (customer.EmailAddress == string.Empty)
+                {
+                    result.ValidationErrors.Add(new DbValidationError("EmailAddress", "EmailAddress Cannot be empty"));
+                }
+            }
         }
     }
 }
