@@ -8,6 +8,7 @@ namespace Practice.Core.Domain
     
   {
     public int Id { get; set; }
+
     [StringLength(50)]
     public string Street1 { get; set; }
     [StringLength(50)]
@@ -16,6 +17,7 @@ namespace Practice.Core.Domain
     public string City { get; set; }
     [StringLength(50)]
     public string Region { get; set; }
+
     [StringLength(50)]
     public string Country { get; set; }
     [StringLength(50)]

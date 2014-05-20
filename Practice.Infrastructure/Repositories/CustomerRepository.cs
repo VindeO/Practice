@@ -1,61 +1,105 @@
-﻿using Practice.Core.IRepositories;
+﻿using Practice.Core.Domain;
+using Practice.Core.IRepositories;
 using Practice.Infrastructure.EF;
+using Practice.Infrastructure.UOW;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
+using Practice.Infrastructure.EF.Helpers;
 
 namespace Practice.Infrastructure.Repositories
 {
-   public  class CustomerRepository:ICustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
-       private readonly CustomerContext _context;
-
-       public CustomerRepository(CustomerContext context)
-       {
-           _context = context;
-       }
-        public IQueryable<Core.Domain.Customer> All
+        private readonly CustomerContext _context;
+  
+        public CustomerRepository(CustomerContextUOW uow)
         {
-            get {return _context.Customers; }
+            _context = uow.Context;
+        }
+        //IQueryable allows to add LINQ queries to filter the data
+        public IQueryable<Customer> All
+        {
+            get { return _context.Customers; }
         }
 
-        public IQueryable<Core.Domain.Customer> AllIncluding(params System.Linq.Expressions.Expression<Func<Core.Domain.Customer, object>>[] includeProperties)
+        public List<Customer> AllCustomers
         {
-            throw new NotImplementedException();
+            get { return _context.Customers.ToList(); }
+        }
+        public List<Customer> AllCustomersWhoHaveOrdered
+        {
+            get { return _context.Customers.Where(c => c.Orders.Any()).ToList(); }
         }
 
-        public Core.Domain.Customer Find(int id)
+        public IQueryable<Customer> AllIncluding(params Expression<Func<Customer, object>>[] includeProperties)
         {
-            throw new NotImplementedException();
+            IQueryable<Customer> query = _context.Customers;
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+            return query;
         }
 
-        public void InsertOrUpdate(Core.Domain.Customer entity)
+        public Customer Find(int id)
         {
-           if(entity.Id == default(int))
-           {
-               _context.Entry(entity).State = System.Data.Entity.EntityState.Added;
-           }
-           else
-           {
-               _context.Entry(entity).State = System.Data.Entity.EntityState.Modified;
-           }
+            return _context.Customers.Find(id);
+        }
+      
+
+        public void InsertOrUpdate(Customer customer)
+        {
+            
+            //if (customer.Id == default(int))
+            //{
+            //    Alll the objects in the graph will get updated to EntityState.Added (Orders,Addresses)
+            //   
+            //    _context.Customers.Add(customer);
+            //}
+            //else
+            //{
+            //    Only Cutomer EntityStated is set to Modified, but not the Orders, Address
+            //    _context.Entry(customer).State = EntityState.Modified;
+            //}
+            if (customer.Id == default(int)) // New entity
+            {
+                _context.Entry(customer).State = EntityState.Added;  //Context insert
+            }
+            else        // Existing entity
+            {
+                //If we add a new Address without involving Context it will throw errors ( Address's CustomerId , Customer will be null )
+                //_context.Customers.Add(customer);
+                _context.Entry(customer).State = EntityState.Modified; //Context update
+
+            }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var customer = _context.Customers.Find(id);
+            _context.Customers.Remove(customer);
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _context.Dispose();
         }
 
-        public void InsertGraph(Core.Domain.Customer customer)
+
+        public void InsertOrUpdateGraph(Customer customerGraph)
         {
-            _context.Customers.Add(customer);
+            if (customerGraph.State == State.Added)
+            {
+                _context.Customers.Add(customerGraph);
+            }
+            else
+            {
+                _context.Customers.Add(customerGraph);
+                _context.ApplyStateChanges();
+            }
         }
     }
 }

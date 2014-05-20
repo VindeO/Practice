@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Practice.Core.IRepositories
 {
+    //One Repo per Type
     public interface IEntityRepository<T> : IDisposable
     {
         IQueryable<T> All { get; }

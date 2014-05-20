@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Practice.Core.IRepositories
 {
-    public interface IAddressRepository : IEntityRepository<Address>
+    public interface IReferenceRepository:IDisposable
     {
+        IQueryable<ProductReference> Products { get; }
+        IQueryable<CustomerReference> Customers { get; }
+
     }
 }

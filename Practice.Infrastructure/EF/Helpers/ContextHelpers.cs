@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Practice.Infrastructure.EF.Helpers
 {
-    public class ContextHelpers
+    public static class ContextHelpers
     {
         public static void ApplyStateChanges(this DbContext context)
         {

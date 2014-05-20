@@ -27,37 +27,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8C6C1F
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://win-9rjggdprki1:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CSharp\\CSharp.csproj
-		SccProjectName1 = CSharp
-		SccLocalPath1 = CSharp
-		SccProjectUniqueName2 = PracticeUnitTest\\PracticeUnitTest.csproj
-		SccProjectName2 = PracticeUnitTest
-		SccLocalPath2 = PracticeUnitTest
-		SccProjectUniqueName3 = Practice.Core\\Practice.Core.csproj
-		SccProjectTopLevelParentUniqueName3 = Practice.sln
-		SccProjectName3 = Practice.Core
-		SccLocalPath3 = Practice.Core
-		SccProjectUniqueName4 = Practice.Infrastructure\\Practice.Infrastructure.csproj
-		SccProjectTopLevelParentUniqueName4 = Practice.sln
-		SccProjectName4 = Practice.Infrastructure
-		SccLocalPath4 = Practice.Infrastructure
-		SccProjectUniqueName5 = Practice.MVC5\\Practice.MVC5.csproj
-		SccProjectTopLevelParentUniqueName5 = Practice.sln
-		SccProjectName5 = Practice.MVC5
-		SccLocalPath5 = Practice.MVC5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{742A066C-194E-4A7C-85DE-842315BE18FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{742A066C-194E-4A7C-85DE-842315BE18FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{742A066C-194E-4A7C-85DE-842315BE18FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{742A066C-194E-4A7C-85DE-842315BE18FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{021B23F8-2589-4B97-BE72-7E3C145B7B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

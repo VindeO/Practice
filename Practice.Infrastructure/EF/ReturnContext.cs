@@ -1,4 +1,5 @@
 ﻿using Practice.Core.Domain;
+using Practice.Infrastructure.EF.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

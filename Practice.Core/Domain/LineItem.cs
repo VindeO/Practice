@@ -6,36 +6,23 @@ namespace Practice.Core.Domain
 {
   public class LineItem : IObjectWithState
   {
-    public int LineItemId { get; set; }
+      public int LineItemId { get; set; }
 
-    public int OrderId { get; set; }
-    public int ProductId { get; set; }
+      public int OrderId { get; set; }
+      public int ProductId { get; set; }
 
-   // public int OrderQty { get; set; }
-    public Nullable<decimal> UnitPrice { get; set; }
-    public Nullable<decimal> UnitPriceDiscount { get; set; }
+      public int OrderQty { get; set; }
+      public Nullable<decimal> UnitPrice { get; set; }
+      public Nullable<decimal> UnitPriceDiscount { get; set; }
 
-    public decimal LineTotal { get; set; }
+      public decimal LineTotal { get; set; }
 
-    public Product Product { get; set; }
-    public Order Order { get; set; }
+      public Product Product { get; set; }
+      public Order Order { get; set; }
 
-    public Nullable<int> ShipmentId { get; set; }
+      public Nullable<int> ShipmentId { get; set; }
 
-    [NotMapped]
-    public State State { get; set; }
-
-    public int WeightInOunces { get; set; }
-
-    public bool OverWeightLineItem
-    {
-      get
-      {
-        return (WeightInOunces * OrderQty > Convert.ToInt32(Resources.MaximumOuncesForRegularShipping));
-      }
-    }
-    
-    public int OrderQty{ get; set; }
- 
+      [NotMapped]
+      public State State { get; set; }
   }
 }

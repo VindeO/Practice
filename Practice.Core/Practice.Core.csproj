@@ -63,10 +63,10 @@
     <Compile Include="Domain\SalaryHistory.cs" />
     <Compile Include="Domain\Shipment.cs" />
     <Compile Include="Domain\Shipper.cs" />
-    <Compile Include="IRepositories\IAddressRepository.cs" />
     <Compile Include="IRepositories\ICustomerRepository.cs" />
     <Compile Include="IRepositories\IEntityRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
+    <Compile Include="IRepositories\IReferenceRepository.cs" />
     <Compile Include="IRepositories\ISalesPromotionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,7 +6,8 @@
 
 Disconnected Graphs
 DbSet.Add(root) : All elements State = Added. inserts each element, even if pre-existing in DB
-DbSet.Attach(root): Al elements State = unchanged . Any new records with missing FKs will throw
+DbSet.Attach(root): Al elements State = unchanged . Any new records with missing FKs will throw exception
+Context.Entry(root).State = En
 
 
 EF Validations
